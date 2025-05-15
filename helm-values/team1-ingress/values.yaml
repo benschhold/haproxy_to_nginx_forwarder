@@ -1,0 +1,11 @@
+controller:
+  service:
+    type: ClusterIP
+  ingressClassResource:
+    name: team1-ingress
+  ingressClass: team1-ingress
+  publishService:
+    enabled: false
+  scope:
+    enabled: true
+    namespace: ingress-team1

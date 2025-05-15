@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: team1-ingress
+  namespace: ingress-team1
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: team1-ingress
+  rules:
+  - host: team1.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: team1-service
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - team1.example.com
+    secretName: team1-tls
