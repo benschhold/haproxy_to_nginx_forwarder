@@ -3,8 +3,9 @@ kind: Ingress
 metadata:
   name: team1-ingress-example
   namespace: team1
-  #annotations:
-    #haproxy.org/ssl-passthrough: "true"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    acme.cert-manager.io/http01-ingress-class: "nginx-team1"
 spec:
   ingressClassName: nginx-team1
   rules:
