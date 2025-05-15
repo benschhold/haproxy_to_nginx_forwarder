@@ -16,6 +16,7 @@ spec:
       releaseName: team1-ingress
       values: |
         controller:
+          ingressClass: nginx-team1
           service:
             type: ClusterIP
   syncPolicy:
