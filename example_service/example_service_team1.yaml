@@ -5,7 +5,7 @@ metadata:
   namespace: team1
 spec:
   selector:
-    app: web
+    app: example-webserver
   ports:
     - port: 80
       targetPort: 80
