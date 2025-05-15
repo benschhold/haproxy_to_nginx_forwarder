@@ -13,6 +13,7 @@ spec:
     chart: nginx-ingress
     targetRevision: 2.1.0  # or latest
     helm:
+      oci: true
       releaseName: team1-ingress
       values: |
         controller:
