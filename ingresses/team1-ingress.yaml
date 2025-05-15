@@ -4,9 +4,9 @@ metadata:
   name: team1-ingress
   namespace: team1
   annotations:
-    kubernetes.io/ingress.class: haproxy
     haproxy.org/ssl-passthrough: "true"
 spec:
+  ingressClassName: haproxy
   rules:
   - host: team1.138.124.209.74.sslip.io
     http:
