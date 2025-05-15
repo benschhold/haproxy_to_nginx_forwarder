@@ -8,6 +8,10 @@ metadata:
     acme.cert-manager.io/http01-ingress-class: "nginx-team1"
 spec:
   ingressClassName: nginx-team1
+  tls:
+    - hosts:
+      - team1.138.124.209.74.sslip.io
+      secretName: team1-ingress-tls
   rules:
   - host: team1.138.124.209.74.sslip.io
     http:
