@@ -14,8 +14,9 @@ spec:
     targetRevision: 1.36.0
     helm:
       values: |
-        service:
-          type: LoadBalancer 
+        controller:
+          service:
+            type: LoadBalancer 
   syncPolicy:
     automated:
       prune: true
