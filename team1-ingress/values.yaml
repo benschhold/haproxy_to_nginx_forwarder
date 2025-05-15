@@ -9,3 +9,4 @@ controller:
   scope:
     enabled: true
     namespace: ingress-team1
+

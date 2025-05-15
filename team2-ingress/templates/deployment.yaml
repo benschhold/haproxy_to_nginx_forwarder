@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "team2-ingress.fullname" . }}
+  labels:
+    app: {{ include "team2-ingress.name" . }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "team2-ingress.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "team2-ingress.name" . }}
+    spec:
+      containers:
+      - name: controller
+        image: k8s.gcr.io/ingress-nginx/controller:latest
+        ports:
+        - containerPort: 80
+

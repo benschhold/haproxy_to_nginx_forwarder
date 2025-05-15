@@ -2,10 +2,11 @@ controller:
   service:
     type: ClusterIP
   ingressClassResource:
-    name: team3-ingress
-  ingressClass: team3-ingress
+    name: team2-ingress
+  ingressClass: team2-ingress
   publishService:
     enabled: false
   scope:
     enabled: true
-    namespace: ingress-team3
+    namespace: ingress-team2
+
