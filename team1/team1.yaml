@@ -14,8 +14,10 @@ spec:
     targetRevision: 4.10.0  # or latest
     helm:
       releaseName: team1-ingress
-      valueFiles:
-            - values/values.yaml
+      values: |
+        controller:
+          service:
+            type: ClusterIP
   syncPolicy:
     automated:
       prune: true
