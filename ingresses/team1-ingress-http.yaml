@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: team1-ingress
+  namespace: team1
+  #annotations:
+    #haproxy.org/ssl-passthrough: "true"
+spec:
+  ingressClassName: haproxy
+  rules:
+  - host: team1.138.124.209.74.sslip.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: team1-ingress-ingress-nginx-controller
+            port:
+              number: 80
