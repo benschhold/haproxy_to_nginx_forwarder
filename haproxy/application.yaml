@@ -12,6 +12,10 @@ spec:
     repoURL: https://haproxytech.github.io/helm-charts
     chart: kubernetes-ingress
     targetRevision: 1.36.0
+    helm:
+      values: |
+        service:
+          type: LoadBalancer 
   syncPolicy:
     automated:
       prune: true
