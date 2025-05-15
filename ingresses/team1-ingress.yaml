@@ -15,5 +15,6 @@ spec:
         backend:
           service:
             name: team1-ingress-ingress-nginx-controller
+            namespace: team1
             port:
               number: 443
