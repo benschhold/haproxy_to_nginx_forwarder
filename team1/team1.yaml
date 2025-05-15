@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: oci://ghcr.io/nginx/charts/nginx-ingress
+    repoURL: oci://registry-1.docker.io/nginxcharts
     chart: nginx-ingress
     targetRevision: 2.1.0  # or latest
     helm:
