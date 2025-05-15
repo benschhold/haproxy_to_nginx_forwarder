@@ -6,6 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     acme.cert-manager.io/http01-ingress-class: "nginx-team1"
+    kubernetes.io/ingress.class: "nginx-team1"
 spec:
   ingressClassName: nginx-team1
   tls:
