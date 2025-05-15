@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: controller
-        image: registry.k8s.io/ingress-nginx/controller:latest
+        image: registry.k8s.io/ingress-nginx/controller:v1.12.2
         ports:
         - containerPort: 80
 
