@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: haproxy-ingress
+  namespace: haproxy-ingress
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: haproxy-ingress
+  source:
+    repoURL: https://haproxytech.github.io/helm-charts
+    chart: kubernetes-ingress
+    targetRevision: 1.36.0
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
