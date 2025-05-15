@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: haproxy-ingress
-  namespace: haproxy-ingress
+  namespace: argocd
 spec:
   project: default
   destination:
