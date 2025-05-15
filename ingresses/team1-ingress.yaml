@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: team1-ingress
-  namespace: haingress
+  namespace: haproxy-ingress
   annotations:
     kubernetes.io/ingress.class: haproxy
 spec:
