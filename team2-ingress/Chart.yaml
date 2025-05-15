@@ -1,7 +1,0 @@
-apiVersion: v2
-name: team2-ingress
-description: NGINX Ingress Controller for team2
-type: application
-version: 0.1.0
-appVersion: 1.0
-

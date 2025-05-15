@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: team1-ingress
+  namespace: argocd
+spec:
+  destination:
+    namespace: team1
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    chart: ingress-nginx
+    targetRevision: 4.10.0  # or latest
+    helm:
+      releaseName: team1-ingress
+      valueFiles:
+            - values/values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
