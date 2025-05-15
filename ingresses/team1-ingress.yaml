@@ -2,24 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: team1-ingress
-  namespace: team1
+  namespace: haingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/ingress.class: haproxy
 spec:
-  ingressClassName: team1-ingress
   rules:
   - host: team1.example.com
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: /
         backend:
           service:
-            name: team1-service
+            name: team1-nginx-ingress
             port:
               number: 80
-  tls:
-  - hosts:
-    - team1.example.com
-    secretName: team1-tls
