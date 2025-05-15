@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://charts.helm.sh/stable
+    repoURL: oci://ghcr.io/nginx/chart
     chart: nginx-ingress
     targetRevision: 2.1.0  # or latest
     helm:
