@@ -5,7 +5,7 @@ metadata:
   namespace: team1
   annotations:
     kubernetes.io/ingress.class: haproxy
-    haproxy.org/tls-passthrough: "true"
+    haproxy.org/ssl-passthrough: "true"
 spec:
   rules:
   - host: team1.138.124.209.74.sslip.io
